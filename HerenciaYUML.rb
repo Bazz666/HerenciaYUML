@@ -55,7 +55,7 @@ class OneTimeAppointment < Appointment
         @month = month
         @year = year
     end
-    
+
     def occurs_on?(day, month, year)
         self.day == day && self.month == month && self.year == year
     end
@@ -64,3 +64,9 @@ class OneTimeAppointment < Appointment
         puts "\n Reunión única en #{@location} sobre #{@purpose} el #{@day}/#{@month}/#{@year} a la(s) #{@hour}:#{@min}"
     end
 end
+
+puts OneTimeAppointment.new('Desafío Latam', 'Trabajo', 14, 30, 4, 6, 2019)
+
+puts DailyAppontment.new('Desafío Latam', 'Educación', 8, 15)
+
+puts MonthlyAppointment.new('NASA', 'Aliens', 8, 15, 23)
