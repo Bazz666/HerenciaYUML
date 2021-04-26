@@ -33,3 +33,14 @@ class MonthlyAppointment < Appointment
     end
 
 end
+
+class DailyAppontment < Appointment
+
+    def occurs_on?(hour, min)
+        self.hour == hour && self.min ==min
+    end
+
+    def to_s
+        puts "La reunión diaria  es en #{@location} sobre #{@purpose} a la(s) #{@hour}:#{@min}"
+    end
+end
